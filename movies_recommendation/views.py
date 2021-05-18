@@ -14,7 +14,6 @@ def index(request):
 
 def movies_recommendation(request):
     query = request.GET['liste']
-    print(query)
     test = hybrid(1, query)
     context = {'test': test}
     return render(request, 'movies_recommendation/list.html', context)
