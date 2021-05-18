@@ -35,7 +35,8 @@ path = "./"
 
 class Movies:
   lo = pd.read_csv(path + 'movies_metadata.csv')
-  title = lo.title
+  print(lo.columns)
+  title = lo.original_title
 
 
 #Read main csv with film and many informations
