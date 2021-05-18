@@ -1,0 +1,13 @@
+{% extends 'movies_recommendation/base.html' %}
+
+{% block content %}
+
+{% for test in test.title %}
+<div class="col-sm-4 text-center">
+    <img class="img-responsive" src="https://fr.web.img2.acsta.net/pictures/20/08/03/12/15/2118693.jpg" alt="test">
+    <h3><a href="/">{{ test }}</a></h3>
+</div>
+{% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'movies_recommendation/base.html' %}
+
+{% block content %}
+
+<form action="{% url 'page1' %}">
+<select name="liste">
+    <option disable="true" selected>-- Choose your favorite movie --</option>
+    {% for i in title_movies %}
+        <option>{{ i }}</option>
+    {% endfor %}
+</select>
+<input type="submit" value="click">
+</form>
+
+{% endblock %}
