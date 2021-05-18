@@ -1,13 +1,3 @@
-from csv import reader
-
-class Movies:
-  title = []
-  id = []
-  vote_average = []
-  with open('./movies_metadata.csv', 'r') as read_obj:
-    csv_reader = reader(read_obj)
-    title = [row[8]for row in csv_reader]
-
 # -*- coding: utf-8 -*-
 # """Copie de MovieRecomendationProject2.ipynb
 
@@ -41,6 +31,12 @@ import warnings; warnings.simplefilter('ignore')
 
 #Define path of all csv files
 path = "./"
+
+
+class Movies:
+  lo = pd.read_csv(path + 'movies_metadata.csv')
+  title = lo.title
+
 
 #Read main csv with film and many informations
 md = pd.read_csv(path + "movies_metadata.csv")
